@@ -164,12 +164,12 @@
     <footer>
       <div id="inquire">
         <div class="container">
-          <h1>Inquire</h1>
-          <p>
+          <h1 class="st__headline">Inquire</h1>
+          <p class="st__text">
             Sign up today and get the best value available for a full-service
             luxury rental.
           </p>
-          <a href="#sign-up" class="btn light open-modal">Sign Up</a>
+          <a href="#" class="btn light open-modal st__text">Sign Up</a>
         </div>
       </div>
 
@@ -185,7 +185,7 @@
 
         <ul>
           <li><a href="/faq.html">FAQ </a></li>
-          <li><a href="#sign-up" class="btn open-modal">Sign Up</a></li>
+          <li><a href="#" class="btn open-modal">Sign Up</a></li>
         </ul>
       </nav>
     </footer>
@@ -195,16 +195,40 @@
         <div class="close"></div>
         <h2>Sign Up Today</h2>
 
-        <input type="text" placeholder="First Name" />
-        <input type="text" placeholder="Last Name" />
-        <input type="text" placeholder="Email Address" />
-        <input type="text" placeholder="Phone Number" />
-        <select name="" id="">
-          <option value="" selected disabled>Household Income</option>
-          <option value="">Under 75k</option>
-          <option value="">75k - 100k</option>
-          <option value="">Above 100k</option>
-        </select>
+        <input type="text" placeholder="First Name *" />
+        <input type="text" placeholder="Last Name *" />
+        <input type="text" placeholder="Email Address *" />
+        <input type="text" placeholder="Phone Number *" />
+        <p>Household Income *</p>
+        <div class="row">
+          <label for="Under_75"
+            ><span>Under 75k</span>
+            <input
+              type="radio"
+              name="hh-income"
+              id="Under_75"
+              value="Under_75k"
+            />
+            <span class="bg"></span>
+          </label>
+
+          <label for="75-100"
+            ><span>75k-100k</span>
+            <input type="radio" name="hh-income" id="75-100" value="75-100" />
+            <span class="bg"></span>
+          </label>
+
+          <label for="Above_100"
+            ><span>Above 100k</span>
+            <input
+              type="radio"
+              name="hh-income"
+              id="Above_100"
+              value="Above_100"
+            />
+            <span class="bg"></span>
+          </label>
+        </div>
         <div class="btn">Submit</div>
       </form>
     </div>
