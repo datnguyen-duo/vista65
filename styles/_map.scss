@@ -106,7 +106,11 @@
     }
   }
 
-  .mapboxgl-control-container {
+  .mapboxgl-ctrl-bottom-left,
+  .mapboxgl-ctrl-bottom-right {
     display: none;
+  }
+  .mapboxgl-ctrl-top-right {
+    top: 2rem;
   }
 }
