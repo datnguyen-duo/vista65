@@ -4,7 +4,7 @@ var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/light-v9",
   center: [-73.85801488650704, 40.728214130453196],
-  zoom: 15.2,
+  zoom: 15.1,
 });
 map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();

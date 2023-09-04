@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     trigger: document.body,
     start: "5px top",
     end: "101% bottom",
-    // markers: true,
     toggleClass: { targets: ".main-nav", className: "scrolled" },
   });
   //SWIPER
@@ -97,6 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".btn-cell .btn").forEach((btn) => {
     btn.addEventListener("click", function () {
       btn.closest(".btn-cell").nextElementSibling.classList.toggle("active");
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 450);
     });
   });
 
