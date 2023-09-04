@@ -1,0 +1,36 @@
+footer {
+  background: url("/assets/vista65-pattern.webp") 50% / cover;
+  background-blend-mode: color-dodge;
+
+  nav {
+    position: relative;
+    border-top: 1px solid #fff;
+    color: #fff !important;
+  }
+
+  #inquire {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    .container {
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      background: $color-brown;
+      padding: calc(#{$gutter} + #{$spacer} / 2) calc(#{$gutter} / 2);
+      margin: auto auto 2rem;
+      p {
+        margin: 1rem 0 2rem;
+        padding: 0 2rem;
+      }
+
+      .btn {
+        &:hover {
+          background: $color-purple;
+        }
+      }
+    }
+  }
+}

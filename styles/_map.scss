@@ -1,0 +1,112 @@
+#neighborhood-map {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+
+  #map-sidebar {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid $color-brown;
+  }
+  #map {
+    width: 60%;
+    height: calc(100% - 2rem);
+    padding: 2rem 0 0 2rem;
+  }
+  #map-popup {
+    display: none;
+    padding: 2rem;
+    position: absolute;
+    min-width: 400px;
+    bottom: 1rem;
+    left: 3rem;
+    background-color: white;
+    filter: drop-shadow(16px 16px 10px rgba(60, 60, 60, 0.1));
+    z-index: 100;
+  }
+
+  #map-popup-url {
+    text-decoration: none;
+    color: #aa7854;
+  }
+  .filter-container {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    padding: calc(#{$gutter} / 2);
+    border-bottom: 1px solid $color-brown;
+  }
+  #map-items-container {
+    overflow-y: auto;
+    padding: calc(#{$gutter} / 2);
+  }
+  #map-items {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    text-align: left;
+  }
+  .clean-button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+  }
+  .map-button-container {
+    width: 100%;
+    display: flex;
+  }
+  .map-item-button {
+    padding-left: 0;
+    margin-left: 1rem;
+    margin-right: auto;
+    color: black;
+    text-align: left;
+  }
+  .map-button {
+    background-color: #fff;
+    color: $color-brown;
+    width: 100%;
+    padding: 0.7rem 2rem;
+    font-family: $font-garmond;
+    font-size: 16px;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  .map-button-active,
+  .map-button:hover {
+    background-color: $color-purple;
+    color: #fff;
+  }
+
+  .circle-list-item {
+    border-radius: 100px;
+    height: 25px;
+    width: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #aa7854;
+  }
+
+  .mapboxgl-map {
+    font-family: $font-garmond;
+    font-size: 16px;
+    color: $color-brown;
+    h3 {
+      color: $color-purple;
+    }
+    #map-popup-address {
+      margin: 0.5rem 0 1rem;
+    }
+  }
+
+  .mapboxgl-control-container {
+    display: none;
+  }
+}

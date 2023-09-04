@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="https://use.typekit.net/qac4pyf.css" />
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/scripts/libs/gsap.min.js"></script>
+    <script src="/scripts/libs/ScrollTrigger.min.js"></script>
+    <script src="/scripts/libs/SplitText.min.js"></script>
+    <script src="/scripts/libs/ScrollToPlugin.min.js"></script>
+    <script src="/scripts/main.min.js"></script>
+    <title>Vista65</title>
+  </head>
+  <body class="loading">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/#residences">Residences</a></li>
+        <li><a href="/#amenities">Amenities</a></li>
+        <li><a href="/#neighborhood">Neighborhood</a></li>
+      </ul>
+
+      <a href="/" class="center">
+        <img
+          alt="Vista65 Logo"
+          src="/assets/logo__vista65.webp"
+          width="176"
+          height="50"
+      /></a>
+
+      <ul>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li>
+          <a href="#" class="btn light open-modal">Sign Up</a>
+        </li>
+      </ul>
+    </nav>
+    <section id="banner">
+      <img
+        srcset="/assets/banner.webp 1920w"
+        sizes="(max-width: 1920px) 100vw, 1920px"
+        src="/assets/banner.webp"
+        alt="Vista65 banner"
+        width="1920"
+        height="1380"
+      />
+      <div class="content">
+        <h1 class="st__headline">Vista 65 Lottery <br />98-08 Queens Blvd</h1>
+        <a href="#" class="btn open-modal">Sign Up</a>
+      </div>
+      <div class="countdown">
+        <p class="label">Applications Closing In</p>
+        <div id="time">
+          <p>
+            <span class="weeks headline-2">0</span>
+            <span class="weeks__label">Weeks</span>
+          </p>
+          <p>
+            <span class="days headline-2">0</span>
+            <span class="days__label">Days</span>
+          </p>
+          <p>
+            <span class="hours headline-2">0</span>
+            <span class="hours__label">Hours</span>
+          </p>
+          <p>
+            <span class="minutes headline-2">0</span>
+            <span class="minutes__label">Minutes</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="intro">
+      <div class="row">
+        <div class="col">
+          <img
+            srcset="/assets/hallway.webp 630w"
+            sizes="(min-width: 768px) 33vw, 100vw"
+            src="/assets/hallway.webp"
+            alt="Vista65 Hallway"
+            width="630"
+            height="855"
+            loading="lazy"
+          />
+        </div>
+        <div class="col">
+          <div class="content">
+            <h2 class="st__headline">
+              A luxury rental experience unlike any other in forest hills
+            </h2>
+            <p class="st__text">
+              A brand new luxury rental with access to stunning amenities, this
+              stylish home begins with an open-concept living room, dining room,
+              and kitchen with oversized double-pane soundproof windows and tons
+              of natural light. Experience big city features without the
+              downside, priced significantly below market-rate rent.
+            </p>
+            <a href="#amenities" class="btn st__text">View Amenities</a>
+          </div>
+          <img
+            srcset="/assets/lobby.webp 1200w"
+            sizes="(min-width: 768px) 62.5vw, 100vw"
+            src="/assets/lobby.webp"
+            alt="Vista65 Lobby"
+            width="1200"
+            height="940"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="cta">
+      <h1 class="st__headline">Apply Now</h1>
+      <div class="row st__text">
+        <div class="col">
+          <p class="headline-3">Priced significantly below market-rate rent.</p>
+        </div>
+        <div class="col">
+          <p class="headline-3">1 free month on a 2 year lease.</p>
+        </div>
+        <div class="col">
+          <p class="headline-3">Free access to amenities for 6 months.</p>
+        </div>
+        <div class="col">
+          <a href="#" class="btn open-modal">Sign Up</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="residences" class="text-image --rev">
+      <div class="row">
+        <div class="col">
+          <h1 class="st__headline">Residences</h1>
+          <img
+            srcset="/assets/banner__residences.webp 1341w"
+            sizes="(min-width: 768px) 66.6vw, 100vw"
+            src="/assets/banner__residences.webp"
+            alt="Vista65 Living Room"
+            width="1341"
+            height="1053"
+            loading="lazy"
+          />
+        </div>
+        <div class="col">
+          <div class="content">
+            <h3 class="st__text">
+              a luxury rental experience unlike any other in forest hills
+            </h3>
+            <p class="st__text">
+              The home begins with an open-concept living room, dining room, and
+              kitchen with oversized double-pane soundproof windows and tons of
+              natural light. The kitchen features quartz countertops and
+              backsplashes, custom oak cabinets, Hansgrohe hardware, and a suite
+              of stainless steel appliances. The bedroom has a custom reach-in
+              closet, and subtle accents adorn a serene full bathroom with a
+              deep Kohler soaking tub. The home comes with multi-zone heating
+              and cooling and an in-unit washer/dryer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="residences-slider">
+      <div class="row">
+        <div class="col">
+          <h2 class="st__headline">Residences headline here (5-7 words)</h2>
+          <div class="arrows">
+            <div class="arrow prev">
+              <img
+                alt="arrow-icon"
+                src="/assets/arrow.svg"
+                width="33"
+                height="26"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="arrow next">
+              <img
+                alt="arrow-icon"
+                src="/assets/arrow.svg"
+                width="33"
+                height="26"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="scrollbar">
+            <div class="bar"></div>
+          </div>
+        </div>
+        <div class="col swiper">
+          <div class="row__inner swiper-wrapper">
+            <div class="col__inner swiper-slide">
+              <img
+                alt="Condo Kitchen Island"
+                src="/assets/residences-slider__1.webp"
+                width="966"
+                height="690"
+                loading="lazy"
+              />
+              <p>Condo Kitchen Island</p>
+            </div>
+            <div class="col__inner swiper-slide">
+              <img
+                alt="Condo Kitchen L-Shape"
+                src="/assets/residences-slider__2.webp"
+                width="966"
+                height="690"
+                loading="lazy"
+              />
+              <p>Condo Kitchen L-Shape</p>
+            </div>
+            <div class="col__inner swiper-slide">
+              <img
+                alt="Rental Kitchen"
+                src="/assets/residences-slider__3.webp"
+                width="966"
+                height="690"
+                loading="lazy"
+              />
+              <p>Rental Kitchen</p>
+            </div>
+
+            <div class="col__inner swiper-slide">
+              <img
+                alt="Primary Bathroom"
+                src="/assets/residences-slider__4.webp"
+                width="550"
+                height="690"
+                loading="lazy"
+              />
+              <p>Primary Bathroom</p>
+            </div>
+
+            <div class="col__inner swiper-slide">
+              <img
+                alt="Typical Bathroom"
+                src="/assets/residences-slider__5.webp"
+                width="550"
+                height="690"
+                loading="lazy"
+              />
+              <p>Typical Bathroom</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="amenities" class="text-image">
+      <div class="row">
+        <div class="col">
+          <div class="content">
+            <h3 class="st__text">
+              a luxury rental experience unlike any other in forest hills
+            </h3>
+            <p class="st__text">
+              The home begins with an open-concept living room, dining room, and
+              kitchen with oversized double-pane soundproof windows and tons of
+              natural light. The kitchen features quartz countertops and
+              backsplashes, custom oak cabinets, Hansgrohe hardware, and a suite
+              of stainless steel appliances. The bedroom has a custom reach-in
+              closet, and subtle accents adorn a serene full bathroom with a
+              deep Kohler soaking tub. The home comes with multi-zone heating
+              and cooling and an in-unit washer/dryer.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <h1 class="st__headline">Amenities</h1>
+          <img
+            srcset="/assets/banner__amenities.webp 1341w"
+            sizes="(min-width: 768px) 66.6vw, 100vw"
+            src="/assets/banner__amenities.webp"
+            alt="Vista65 Lounge"
+            width="1341"
+            height="1053"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="amenities-pin">
+      <div class="row">
+        <div class="col">
+          <img
+            srcset="/assets/amenities__1.webp 1010w"
+            sizes="(min-width: 768px) 53vw, 100vw"
+            alt="Landscape Terrace"
+            src="/assets/amenities__1.webp"
+            width="1010"
+            height="700"
+          />
+
+          <img
+            srcset="/assets/amenities__2.webp 1010w"
+            sizes="(min-width: 768px) 53vw, 100vw"
+            alt="Gym"
+            src="/assets/amenities__2.webp"
+            width="1010"
+            height="700"
+          />
+
+          <img
+            srcset="/assets/amenities__3.webp 1010w"
+            alt="Kid's Room"
+            sizes="(min-width: 768px) 53vw, 100vw"
+            src="/assets/amenities__3.webp"
+            width="1010"
+            height="700"
+          />
+
+          <img
+            srcset="/assets/amenities__4.webp 1010w"
+            alt="Outdoor Dining"
+            sizes="(min-width: 768px) 53vw, 100vw"
+            src="/assets/amenities__4.webp"
+            width="1010"
+            height="700"
+          />
+
+          <img
+            srcset="/assets/amenities__5.webp 1010w"
+            alt="Lounge"
+            sizes="(min-width: 768px) 53vw, 100vw"
+            src="/assets/amenities__5.webp"
+            width="1010"
+            height="700"
+          />
+
+          <img
+            srcset="/assets/amenities__6.webp 1010w"
+            alt="Lobby"
+            sizes="(min-width: 768px) 53vw, 100vw"
+            src="/assets/amenities__6.webp"
+            width="1010"
+            height="700"
+          />
+        </div>
+        <div class="col pinned">
+          <div class="row__inner">
+            <span>01</span>
+            <h3>Landscape Terrace</h3>
+          </div>
+
+          <div class="row__inner">
+            <span>02</span>
+            <h3>Gym</h3>
+          </div>
+
+          <div class="row__inner">
+            <span>03</span>
+            <h3>Kid's Room</h3>
+          </div>
+
+          <div class="row__inner">
+            <span>04</span>
+            <h3>Outdoor Dining</h3>
+          </div>
+
+          <div class="row__inner">
+            <span>05</span>
+            <h3>Lounge</h3>
+          </div>
+          <div class="row__inner">
+            <span>06</span>
+            <h3>Lobby</h3>
+          </div>
+
+          <div class="scrollbar">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pricing">
+      <h2 class="st__headline">Discounted Pricing</h2>
+      <div class="grid st__text">
+        <p>Unit Type</p>
+        <p>Rent</p>
+        <p>Household Size</p>
+        <p>Minimum Income</p>
+        <p>Maximum Income</p>
+        <p>Floor Plans</p>
+
+        <div class="headline-3">Studio</div>
+        <div class="headline-3">$2,250</div>
+        <div class="col">
+          <p>1 person</p>
+          <p>2 people</p>
+        </div>
+        <div class="col">
+          <p>$77,143</p>
+          <p>$77,143</p>
+        </div>
+        <div class="col">
+          <p>$128,570</p>
+          <p>$146,900</p>
+        </div>
+        <div class="btn-cell">
+          <div class="btn light">View</div>
+        </div>
+        <div class="floor-plan">
+          <img
+            alt="Vista65 Logo"
+            src="https://placehold.co/1920x800"
+            width="176"
+            height="50"
+          />
+        </div>
+
+        <div class="headline-3">One Bedroom</div>
+        <div class="headline-3">$2,695</div>
+        <div class="col">
+          <p>1 person</p>
+          <p>2 people</p>
+          <p>3 people</p>
+        </div>
+        <div class="col">
+          <p>$92,400</p>
+          <p>$92,400</p>
+          <p>$92,400</p>
+        </div>
+        <div class="col">
+          <p>$128,570</p>
+          <p>$146,900</p>
+          <p>$165,230</p>
+        </div>
+
+        <div class="btn-cell">
+          <div class="btn light">View</div>
+        </div>
+
+        <div class="floor-plan">
+          <img
+            alt="Vista65 Logo"
+            src="https://placehold.co/1920x800"
+            width="176"
+            height="50"
+          />
+        </div>
+
+        <div class="headline-3">Two Bedroom</div>
+        <div class="headline-3">$3,195</div>
+        <div class="col">
+          <p>1 person</p>
+          <p>2 people</p>
+          <p>3 people</p>
+          <p>4 people</p>
+        </div>
+        <div class="col">
+          <p>$109,543</p>
+          <p>$109,543</p>
+          <p>$109,543</p>
+          <p>$109,543</p>
+        </div>
+        <div class="col">
+          <p>$146,900</p>
+          <p>$165,230</p>
+          <p>$183,560</p>
+          <p>$198,250</p>
+        </div>
+        <div class="btn-cell">
+          <div class="btn light">View</div>
+        </div>
+        <div class="floor-plan">
+          <img
+            alt="Vista65 Logo"
+            src="https://placehold.co/1920x800"
+            width="176"
+            height="50"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="neighborhood" class="text-image --rev">
+      <div class="row">
+        <div class="col">
+          <h1 class="st__headline">Neighborhood</h1>
+          <img
+            srcset="/assets/banner__neighborhood.webp 1341w"
+            sizes="(min-width: 768px) 66.6vw, 100vw"
+            src="/assets/banner__neighborhood.webp"
+            alt="Vista65 Neighborhood"
+            width="1341"
+            height="1053"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="col">
+          <div class="content">
+            <h3 class="st__text">
+              a luxury rental experience unlike any other in forest hills
+            </h3>
+            <p class="st__text">
+              The home begins with an open-concept living room, dining room, and
+              kitchen with oversized double-pane soundproof windows and tons of
+              natural light. The kitchen features quartz countertops and
+              backsplashes, custom oak cabinets, Hansgrohe hardware, and a suite
+              of stainless steel appliances. The bedroom has a custom reach-in
+              closet, and subtle accents adorn a serene full bathroom with a
+              deep Kohler soaking tub. The home comes with multi-zone heating
+              and cooling and an in-unit washer/dryer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="neighborhood-map">
+      <div id="map-sidebar">
+        <div class="filter-container">
+          <button
+            class="clean-button map-button map-button-active"
+            id="restaurant-map-button"
+            onclick="filterLocations('Restaurant')"
+          >
+            Restaurants & Cafes
+          </button>
+          <button
+            class="clean-button map-button"
+            id="bar-map-button"
+            onclick="filterLocations('Bar')"
+          >
+            Bars & Nightlife
+          </button>
+
+          <button
+            class="clean-button map-button"
+            id="shop-map-button"
+            onclick="filterLocations('Shop')"
+          >
+            Shops & Retail
+          </button>
+          <button
+            class="clean-button map-button"
+            id="fitness-map-button"
+            onclick="filterLocations('Fitness')"
+          >
+            Fitness
+          </button>
+          <button
+            class="clean-button map-button"
+            id="grocery-map-button"
+            onclick="filterLocations('Grocery')"
+          >
+            Grocery
+          </button>
+          <button
+            class="clean-button map-button"
+            id="transportation-map-button"
+            onclick="filterLocations('Transportation')"
+          >
+            Transportation
+          </button>
+        </div>
+
+        <div id="map-items-container">
+          <div id="map-items"></div>
+        </div>
+      </div>
+      <div id="map">
+        <div id="map-popup">
+          <h3 id="map-popup-title">Restaurant Name</h3>
+          <p id="map-popup-address">20903 Blue Ave</p>
+          <a id="map-popup-url" target="_blank" href="">Open in Google Maps</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="inquire">
+        <div class="container">
+          <h1 class="st__headline">Inquire</h1>
+          <p class="st__text">
+            Sign up today and get the best value available for a full-service
+            luxury rental.
+          </p>
+          <a href="#" class="btn light open-modal st__text">Sign Up</a>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/credits.html">Credits</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+
+        <a class="center" href="https://goo.gl/maps/Wz9212bE41F9wTsv5"
+          >98-08 Queens Blvd Unit 6-E, Queens, NY 11374</a
+        >
+
+        <ul>
+          <li><a href="/faq.html">FAQ </a></li>
+          <li><a href="#" class="btn open-modal">Sign Up</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <div id="modal">
+      <form action="" id="signUpForm">
+        <div class="close"></div>
+        <h2>Sign Up Today</h2>
+
+        <input type="text" placeholder="First Name *" />
+        <input type="text" placeholder="Last Name *" />
+        <input type="text" placeholder="Email Address *" />
+        <input type="text" placeholder="Phone Number *" />
+        <p>Household Income *</p>
+        <div class="row">
+          <label for="Under_75"
+            ><span>Under 75k</span>
+            <input
+              type="radio"
+              name="hh-income"
+              id="Under_75"
+              value="Under_75k"
+            />
+            <span class="bg"></span>
+          </label>
+
+          <label for="75-100"
+            ><span>75k-100k</span>
+            <input type="radio" name="hh-income" id="75-100" value="75-100" />
+            <span class="bg"></span>
+          </label>
+
+          <label for="Above_100"
+            ><span>Above 100k</span>
+            <input
+              type="radio"
+              name="hh-income"
+              id="Above_100"
+              value="Above_100"
+            />
+            <span class="bg"></span>
+          </label>
+        </div>
+        <div class="btn">Submit</div>
+      </form>
+    </div>
+    <script src="/scripts/map.js"></script>
+  </body>
+</html>
