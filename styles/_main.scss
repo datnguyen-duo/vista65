@@ -252,7 +252,7 @@
           max-width: 90%;
 
           @media screen and (max-width: $mobile-breakpoint) {
-            margin: 0 1rem;
+            margin: 0 0.5rem;
           }
           img {
             flex-shrink: 0;

@@ -67,8 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".swiper", {
       slidesPerView: "auto",
       loop: true,
-      // centeredSlides: window.innerWidth > 768 ? false : true,
-      centeredSlides: true,
+      centeredSlides: window.innerWidth > 768 ? false : true,
     });
 
     var totalSlides = swiper.slides.length - swiper.loopedSlides * 2;
