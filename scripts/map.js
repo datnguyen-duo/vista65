@@ -862,6 +862,10 @@ const filterLocations = (type) => {
   renderMapItems(_locations);
 
   adjustMapBoundsToFeatures(map, "locations");
+
+  document.querySelectorAll(".map-button-container").forEach((item) => {
+    item.classList.remove("active");
+  });
 };
 
 function adjustMapBoundsToFeatures(map, sourceId) {
@@ -936,6 +940,13 @@ const highlightItem = (id, label) => {
       url.href = `https://www.google.com/maps?q=${location.lat},${location.lon}`;
     }
   }
+
+  document.querySelectorAll(".map-button-container").forEach((item) => {
+    item.classList.remove("active");
+  });
+  document
+    .querySelectorAll(".map-button-container")
+    [label - 1].classList.add("active");
 };
 
 const unhighlightItem = () => {
