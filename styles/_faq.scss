@@ -1,6 +1,9 @@
 #faq {
   background: $color-tan;
   padding-top: $spacer + 4rem;
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: $spacer / 2 + 4rem;
+  }
   > h1 {
     text-align: center;
   }
@@ -12,12 +15,20 @@
     color: $color-brown;
     align-items: flex-start;
     justify-content: space-between;
-    .col {
-      position: sticky;
-      top: 10rem;
-      &:nth-child(1) {
-        padding-right: calc(#{$gutter} / 2);
 
+    @media screen and (max-width: $mobile-breakpoint) {
+      margin-top: $spacer/ 2;
+      padding: $spacer / 2 2rem;
+    }
+    .col {
+      &:nth-child(1) {
+        position: sticky;
+        top: 10rem;
+
+        padding-right: calc(#{$gutter} / 2);
+        @media screen and (max-width: $mobile-breakpoint) {
+          display: none;
+        }
         a {
           transition: color 0.2s ease-in-out;
           &:not(:last-child) {
@@ -33,9 +44,15 @@
       &:nth-child(2) {
         width: 57%;
         flex-shrink: 0;
+        @media screen and (max-width: $mobile-breakpoint) {
+          width: 100%;
+        }
         .q-group {
           &:not(:last-child) {
             padding-bottom: 8rem;
+            @media screen and (max-width: $mobile-breakpoint) {
+              padding-bottom: 4rem;
+            }
           }
           h2 {
             margin-bottom: 1rem;
@@ -47,6 +64,9 @@
             cursor: pointer;
             position: relative;
             transition: color 0.2s ease-in-out;
+            @media screen and (max-width: $mobile-breakpoint) {
+              padding: 1rem 2rem 1rem 0;
+            }
             &::before,
             &:after {
               content: "";
