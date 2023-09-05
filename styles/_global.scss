@@ -96,6 +96,9 @@ form {
 
   .row {
     justify-content: space-between;
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+    }
     label {
       position: relative;
       width: calc(100% / 3 - 5px);
@@ -103,6 +106,15 @@ form {
       color: $color-brown;
       padding: 0.7rem 2rem;
       cursor: pointer;
+
+      @media screen and (max-width: $mobile-breakpoint) {
+        padding: 0.5rem 1rem;
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
       span {
         position: relative;
         z-index: 1;

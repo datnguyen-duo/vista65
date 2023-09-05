@@ -2,7 +2,9 @@
   max-width: 900px;
   margin: 0 auto;
   padding: $spacer + 4rem 2rem $spacer;
-
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: $spacer/2 + 4rem 2rem $spacer/2;
+  }
   h3 {
     margin: 2em 0 0.5em;
   }

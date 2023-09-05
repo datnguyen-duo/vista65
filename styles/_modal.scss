@@ -36,8 +36,18 @@
     position: relative;
     padding: calc(#{$gutter} / 2);
     text-align: center;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      justify-content: flex-start;
+      padding: 6rem 2rem $spacer / 2;
+      overflow: auto;
+    }
     h2 {
       margin-bottom: 4rem;
+
+      @media screen and (max-width: $mobile-breakpoint) {
+        margin-bottom: 2rem;
+      }
     }
     .close {
       position: absolute;
