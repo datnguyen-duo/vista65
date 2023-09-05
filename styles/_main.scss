@@ -1,5 +1,5 @@
 #banner {
-  height: 100vh;
+  height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +57,11 @@
           border-right: 1px solid rgba(255, 255, 255, 0.6);
           padding-right: 1.5rem;
           margin-right: 1.5rem;
+
+          @media screen and (max-width: $mobile-breakpoint) {
+            padding-right: 0.5rem;
+            margin-right: 0.5rem;
+          }
         }
         span {
           display: block;
@@ -71,24 +76,48 @@
 
 #intro {
   padding: $spacer 0;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: $spacer / 2 0;
+  }
   .row {
     justify-content: space-between;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+    }
     .col {
       &:nth-child(1) {
         width: calc(100% / 3);
         flex-shrink: 0;
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          width: calc(100% / 2);
+        }
       }
       &:nth-child(2) {
         padding-left: calc(#{$gutter} / 2);
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding-left: 0;
+        }
         .content {
           width: 60%;
           margin: 0 auto $spacer * 1.5;
+          @media screen and (max-width: $mobile-breakpoint) {
+            width: 100%;
+            margin: 0;
+            padding: 2rem;
+          }
           h2 {
             margin-bottom: 1rem;
           }
           .btn {
             display: table;
             margin-top: 2rem;
+
+            @media screen and (max-width: $mobile-breakpoint) {
+              margin-top: 1rem;
+            }
           }
         }
       }
@@ -102,14 +131,25 @@
 #cta {
   padding: 0 calc(#{$gutter});
   margin-bottom: $spacer;
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: $spacer / 2;
+  }
   .row {
     border-top: 1px solid $color-brown;
     padding-top: 2rem;
     margin-top: 1rem;
     align-items: center;
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-wrap: wrap;
+    }
     .col {
       &:not(:last-child) {
         padding-right: calc(#{$gutter});
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding-right: 1rem;
+          width: calc(100% / 3);
+        }
       }
 
       &:last-child {
@@ -137,6 +177,10 @@
   .row {
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+    }
     .col {
       &:nth-child(1) {
         position: relative;
@@ -145,16 +189,37 @@
         background: $color-body;
         justify-content: center;
         z-index: 1;
+        @media screen and (max-width: $tablet-breakpoint) {
+          padding: calc(calc(#{$gutter}) + #{$spacer}) 0;
+        }
 
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding: $spacer / 2 0 $spacer / 4;
+          width: 100%;
+          text-align: center;
+          margin-bottom: $spacer / 4;
+        }
         h2 {
           padding: 0 calc(#{$gutter});
+
+          @media screen and (max-width: $mobile-breakpoint) {
+            padding: 0 2rem;
+          }
         }
         .arrows {
-          margin-top: 2rem;
           padding-left: calc(#{$gutter});
           padding-top: 2rem;
+          margin-top: 2rem;
+
           border-top: 1px solid $color-brown;
           display: flex;
+          @media screen and (max-width: $mobile-breakpoint) {
+            justify-content: center;
+            padding-left: 0;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            border-top: none;
+          }
           .arrow {
             cursor: pointer;
             background-color: $color-brown;
@@ -174,7 +239,10 @@
       &:nth-child(2) {
         width: calc(60% - 2rem);
         overflow: hidden;
-
+        @media screen and (max-width: $mobile-breakpoint) {
+          width: 100%;
+          padding-bottom: $spacer / 2;
+        }
         .col__inner {
           flex-shrink: 0;
           display: flex;
@@ -182,10 +250,18 @@
           margin-right: 2rem;
           color: $color-brown;
           max-width: 90%;
+
+          @media screen and (max-width: $mobile-breakpoint) {
+            margin: 0 1rem;
+          }
           img {
             flex-shrink: 0;
             width: auto;
             max-height: calc(((60vw - 2rem) * 0.9) * 0.7);
+
+            @media screen and (max-width: $mobile-breakpoint) {
+              max-height: calc(((100vw - 2rem) * 0.9) * 0.7);
+            }
           }
           p {
             margin-top: 1rem;
@@ -204,6 +280,10 @@
       flex-shrink: 0;
       &:nth-child(1) {
         padding: $spacer calc(#{$gutter} / 2) $spacer 0;
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding: $spacer / 2 2rem $spacer / 2 0;
+        }
         width: 60%;
         img {
           &:not(:last-of-type) {
@@ -219,6 +299,10 @@
         justify-content: center;
         position: sticky;
         top: 0;
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding: $spacer / 2 2rem;
+        }
         .row__inner {
           align-items: center;
           border-bottom: 1px solid $color-brown;
@@ -273,11 +357,22 @@
 
 #pricing {
   padding: $spacer calc(#{$gutter});
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: $spacer / 2 0;
+    overflow-y: auto;
 
+    > h2 {
+      padding: 0 2rem;
+    }
+  }
   .grid {
     margin-top: 4rem;
-    grid-template-columns: 20% 20% 15% 15% 15% 15%;
-
+    grid-template-columns: 20% 16% 16% 16% 16% 16%;
+    @media screen and (max-width: $mobile-breakpoint) {
+      margin-top: 2rem;
+      min-width: 700px;
+      padding: 0 2rem 1rem;
+    }
     > *:not(.floor-plan) {
       border-bottom: 1px solid $color-brown;
       display: flex;
@@ -290,6 +385,9 @@
     > p {
       padding-bottom: 1rem;
       color: $color-brown;
+      @media screen and (max-width: $mobile-breakpoint) {
+        padding-right: 1rem;
+      }
     }
 
     .btn-cell {
@@ -334,7 +432,3 @@
     }
   }
 }
-
-// #map {
-//   padding: $spacer 0;
-// }

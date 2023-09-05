@@ -22,7 +22,7 @@
     <script src="/scripts/main.min.js"></script>
     <title>Vista65</title>
   </head>
-  <body class="loading">
+  <body class="loading index">
     <nav class="main-nav">
       <ul>
         <li><a href="/#residences">Residences</a></li>
@@ -36,13 +36,20 @@
           src="/assets/logo__vista65.webp"
           width="176"
           height="50"
-      /></a>
+        />
+      </a>
 
       <ul>
         <li><a href="/faq.html">FAQ</a></li>
         <li>
-          <a href="#" class="btn light open-modal">Sign Up</a>
+          <a href="#sign-up" class="btn light open-modal">Sign Up</a>
         </li>
+
+        <div class="nav-toggle">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </ul>
     </nav>
     <section id="banner">
@@ -389,101 +396,103 @@
     </section>
     <section id="pricing">
       <h2 class="st__headline">Discounted Pricing</h2>
-      <div class="grid st__text">
-        <p>Unit Type</p>
-        <p>Rent</p>
-        <p>Household Size</p>
-        <p>Minimum Income</p>
-        <p>Maximum Income</p>
-        <p>Floor Plans</p>
+      <div class="auto-overflow">
+        <div class="grid st__text">
+          <p>Unit Type</p>
+          <p>Rent</p>
+          <p>Household Size</p>
+          <p>Minimum Income</p>
+          <p>Maximum Income</p>
+          <p>Floor Plans</p>
 
-        <div class="headline-3">Studio</div>
-        <div class="headline-3">$2,250</div>
-        <div class="col">
-          <p>1 person</p>
-          <p>2 people</p>
-        </div>
-        <div class="col">
-          <p>$77,143</p>
-          <p>$77,143</p>
-        </div>
-        <div class="col">
-          <p>$128,570</p>
-          <p>$146,900</p>
-        </div>
-        <div class="btn-cell">
-          <div class="btn light">View</div>
-        </div>
-        <div class="floor-plan">
-          <img
-            alt="Vista65 Logo"
-            src="https://placehold.co/1920x800"
-            width="176"
-            height="50"
-          />
-        </div>
+          <div class="headline-3">Studio</div>
+          <div class="headline-3">$2,250</div>
+          <div class="col">
+            <p>1 person</p>
+            <p>2 people</p>
+          </div>
+          <div class="col">
+            <p>$77,143</p>
+            <p>$77,143</p>
+          </div>
+          <div class="col">
+            <p>$128,570</p>
+            <p>$146,900</p>
+          </div>
+          <div class="btn-cell">
+            <div class="btn light">View</div>
+          </div>
+          <div class="floor-plan">
+            <img
+              alt="Vista65 Logo"
+              src="https://placehold.co/1920x800"
+              width="176"
+              height="50"
+            />
+          </div>
 
-        <div class="headline-3">One Bedroom</div>
-        <div class="headline-3">$2,695</div>
-        <div class="col">
-          <p>1 person</p>
-          <p>2 people</p>
-          <p>3 people</p>
-        </div>
-        <div class="col">
-          <p>$92,400</p>
-          <p>$92,400</p>
-          <p>$92,400</p>
-        </div>
-        <div class="col">
-          <p>$128,570</p>
-          <p>$146,900</p>
-          <p>$165,230</p>
-        </div>
+          <div class="headline-3">One Bedroom</div>
+          <div class="headline-3">$2,695</div>
+          <div class="col">
+            <p>1 person</p>
+            <p>2 people</p>
+            <p>3 people</p>
+          </div>
+          <div class="col">
+            <p>$92,400</p>
+            <p>$92,400</p>
+            <p>$92,400</p>
+          </div>
+          <div class="col">
+            <p>$128,570</p>
+            <p>$146,900</p>
+            <p>$165,230</p>
+          </div>
 
-        <div class="btn-cell">
-          <div class="btn light">View</div>
-        </div>
+          <div class="btn-cell">
+            <div class="btn light">View</div>
+          </div>
 
-        <div class="floor-plan">
-          <img
-            alt="Vista65 Logo"
-            src="https://placehold.co/1920x800"
-            width="176"
-            height="50"
-          />
-        </div>
+          <div class="floor-plan">
+            <img
+              alt="Vista65 Logo"
+              src="https://placehold.co/1920x800"
+              width="176"
+              height="50"
+            />
+          </div>
 
-        <div class="headline-3">Two Bedroom</div>
-        <div class="headline-3">$3,195</div>
-        <div class="col">
-          <p>1 person</p>
-          <p>2 people</p>
-          <p>3 people</p>
-          <p>4 people</p>
-        </div>
-        <div class="col">
-          <p>$109,543</p>
-          <p>$109,543</p>
-          <p>$109,543</p>
-          <p>$109,543</p>
-        </div>
-        <div class="col">
-          <p>$146,900</p>
-          <p>$165,230</p>
-          <p>$183,560</p>
-          <p>$198,250</p>
-        </div>
-        <div class="btn-cell">
-          <div class="btn light">View</div>
-        </div>
-        <div class="floor-plan">
-          <img
-            alt="Vista65 Logo"
-            src="https://placehold.co/1920x800"
-            width="176"
-            height="50"
-          />
+          <div class="headline-3">Two Bedroom</div>
+          <div class="headline-3">$3,195</div>
+          <div class="col">
+            <p>1 person</p>
+            <p>2 people</p>
+            <p>3 people</p>
+            <p>4 people</p>
+          </div>
+          <div class="col">
+            <p>$109,543</p>
+            <p>$109,543</p>
+            <p>$109,543</p>
+            <p>$109,543</p>
+          </div>
+          <div class="col">
+            <p>$146,900</p>
+            <p>$165,230</p>
+            <p>$183,560</p>
+            <p>$198,250</p>
+          </div>
+          <div class="btn-cell">
+            <div class="btn light">View</div>
+          </div>
+          <div class="floor-plan">
+            <img
+              alt="Vista65 Logo"
+              src="https://placehold.co/1920x800"
+              width="176"
+              height="50"
+            />
+          </div>
         </div>
       </div>
     </section>

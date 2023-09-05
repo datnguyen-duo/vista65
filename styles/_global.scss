@@ -32,7 +32,7 @@ body {
 
 h1,
 .headline {
-  font-size: clamp(50px, 6.25vw, 120px);
+  font-size: clamp(42px, 6.25vw, 120px);
   font-family: $font-neue;
   font-weight: 350;
   text-transform: uppercase;
@@ -50,7 +50,7 @@ h2,
 
 h3,
 .headline-3 {
-  font-size: clamp(22px, 1.25vw, 24px);
+  font-size: clamp(20px, 1.25vw, 24px);
   font-family: $font-neue;
   font-weight: 350;
 }
@@ -143,7 +143,9 @@ form {
   background-color: $color-brown;
   color: #fff;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 0.5rem 1rem;
+  }
   &:hover {
     background-color: #fff;
     color: $color-brown;
@@ -177,11 +179,21 @@ form {
   overflow: hidden;
 }
 
+.auto-overflow {
+  overflow: auto;
+}
+
 .text-image {
   color: #fff;
   .row {
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+    }
     .col {
       position: relative;
+      @media screen and (max-width: $mobile-breakpoint) {
+        width: 100% !important;
+      }
       h1 {
         position: absolute;
         top: 0;
@@ -190,13 +202,18 @@ form {
       }
       .content {
         margin: auto;
-        padding: 0 calc(#{$gutter} / 2);
+        padding: calc(#{$gutter} / 2);
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding: 2rem;
+        }
         h3 {
           margin-bottom: 1rem;
         }
       }
       img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
       &:nth-child(1) {
         width: calc(100% / 3);
@@ -232,6 +249,18 @@ form {
       }
     }
   }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    &:not(.--rev) {
+      .row {
+        .col {
+          &:nth-child(2) {
+            order: -1;
+          }
+        }
+      }
+    }
+  }
 }
 .scrollbar {
   position: absolute;
@@ -240,7 +269,12 @@ form {
   width: 1px;
   height: 100%;
   background-color: $color-brown;
-
+  @media screen and (max-width: $mobile-breakpoint) {
+    height: 1px;
+    width: 100%;
+    top: unset;
+    bottom: 0;
+  }
   .bar {
     position: absolute;
     left: -0.5px;
@@ -248,5 +282,13 @@ form {
     width: 2px;
     background: #21202b;
     transition: height 0.4s ease-in-out;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      transition: width 0.4s ease-in-out;
+      top: -0.5px;
+      left: 0;
+      width: unset;
+      height: 2px;
+    }
   }
 }

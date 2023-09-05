@@ -67,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".swiper", {
       slidesPerView: "auto",
       loop: true,
+      // centeredSlides: window.innerWidth > 768 ? false : true,
+      centeredSlides: true,
     });
 
     var totalSlides = swiper.slides.length - swiper.loopedSlides * 2;
@@ -81,13 +83,24 @@ document.addEventListener("DOMContentLoaded", function () {
     next.addEventListener("click", function () {
       swiper.slideNext();
     });
-    document.querySelector(".bar").style.height = (1 / totalSlides) * 100 + "%";
+
+    if (window.innerWidth > 786) {
+      document.querySelector(".bar").style.height =
+        (1 / totalSlides) * 100 + "%";
+    } else {
+      document.querySelector(".bar").style.width =
+        (1 / totalSlides) * 100 + "%";
+    }
 
     swiper.on("slideChange", function () {
       var currentSlide = swiper.realIndex + 1;
       var progress = currentSlide / totalSlides;
 
-      document.querySelector(".bar").style.height = progress * 100 + "%";
+      if (window.innerWidth > 768) {
+        document.querySelector(".bar").style.height = progress * 100 + "%";
+      } else {
+        document.querySelector(".bar").style.width = progress * 100 + "%";
+      }
     });
   }
 
@@ -146,6 +159,10 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  document.querySelector(".nav-toggle").addEventListener("click", function () {
+    document.body.classList.toggle("init__nav");
+  });
 });
 
 window.addEventListener("load", function () {

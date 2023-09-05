@@ -6,6 +6,18 @@ footer {
     position: relative;
     border-top: 1px solid #fff;
     color: #fff !important;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      grid-template-columns: 1fr 1fr;
+      white-space: nowrap;
+
+      > .center {
+        order: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 1rem;
+      }
+    }
   }
 
   #inquire {
@@ -21,6 +33,11 @@ footer {
       background: $color-brown;
       padding: calc(#{$gutter} + #{$spacer} / 2) calc(#{$gutter} / 2);
       margin: auto auto 2rem;
+
+      @media screen and (max-width: $mobile-breakpoint) {
+        width: calc(100% - 4rem);
+        padding: $spacer 2rem;
+      }
       p {
         margin: 1rem 0 2rem;
         padding: 0 2rem;

@@ -6,5 +6,9 @@ $color-purple: #21202b;
 $color-brown: #a89078;
 $color-tan: #edeae8;
 
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1080px;
+$laptop-breakpoint: 1440px;
+
 $spacer: 8rem;
-$gutter: calc(min(10vw, 192px));
+$gutter: calc(min(8vw, 153.6px));
