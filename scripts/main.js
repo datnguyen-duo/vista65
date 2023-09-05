@@ -61,6 +61,12 @@ document.addEventListener("DOMContentLoaded", function () {
     end: "101% bottom",
     toggleClass: { targets: ".main-nav", className: "scrolled" },
   });
+
+  document.querySelectorAll(".main-nav a").forEach((link) => {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("init__nav");
+    });
+  });
   //SWIPER
 
   if (document.querySelector(".swiper")) {
