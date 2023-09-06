@@ -820,6 +820,7 @@ map.on("load", function () {
       layout: {
         "icon-image": "vista65", // reference the image
         "icon-size": 0.7,
+        "icon-allow-overlap": false,
       },
     });
   });
