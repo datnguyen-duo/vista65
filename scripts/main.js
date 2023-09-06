@@ -135,7 +135,7 @@ window.addEventListener("load", function () {
   if (document.querySelector(".swiper")) {
     const swiper = new Swiper(".swiper", {
       slidesPerView: "auto",
-      loop: true,
+      loop: false,
       centeredSlides: window.innerWidth > 768 ? false : true,
     });
 
