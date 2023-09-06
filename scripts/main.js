@@ -67,47 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.classList.remove("init__nav");
     });
   });
-  //SWIPER
-
-  if (document.querySelector(".swiper")) {
-    const swiper = new Swiper(".swiper", {
-      slidesPerView: "auto",
-      loop: true,
-      centeredSlides: window.innerWidth > 768 ? false : true,
-    });
-
-    var totalSlides = swiper.slides.length - swiper.loopedSlides * 2;
-
-    var prev = document.querySelector(".arrow.prev");
-    var next = document.querySelector(".arrow.next");
-
-    prev.addEventListener("click", function () {
-      swiper.slidePrev();
-    });
-
-    next.addEventListener("click", function () {
-      swiper.slideNext();
-    });
-
-    if (window.innerWidth > 786) {
-      document.querySelector(".bar").style.height =
-        (1 / totalSlides) * 100 + "%";
-    } else {
-      document.querySelector(".bar").style.width =
-        (1 / totalSlides) * 100 + "%";
-    }
-
-    swiper.on("slideChange", function () {
-      var currentSlide = swiper.realIndex + 1;
-      var progress = currentSlide / totalSlides;
-
-      if (window.innerWidth > 768) {
-        document.querySelector(".bar").style.height = progress * 100 + "%";
-      } else {
-        document.querySelector(".bar").style.width = progress * 100 + "%";
-      }
-    });
-  }
 
   // PRICING
 
@@ -171,6 +130,47 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("load", function () {
+  //SWIPER
+
+  if (document.querySelector(".swiper")) {
+    const swiper = new Swiper(".swiper", {
+      slidesPerView: "auto",
+      loop: true,
+      centeredSlides: window.innerWidth > 768 ? false : true,
+    });
+
+    var totalSlides = swiper.slides.length - swiper.loopedSlides * 2;
+
+    var prev = document.querySelector(".arrow.prev");
+    var next = document.querySelector(".arrow.next");
+
+    prev.addEventListener("click", function () {
+      swiper.slidePrev();
+    });
+
+    next.addEventListener("click", function () {
+      swiper.slideNext();
+    });
+
+    if (window.innerWidth > 786) {
+      document.querySelector(".bar").style.height =
+        (1 / totalSlides) * 100 + "%";
+    } else {
+      document.querySelector(".bar").style.width =
+        (1 / totalSlides) * 100 + "%";
+    }
+
+    swiper.on("slideChange", function () {
+      var currentSlide = swiper.realIndex + 1;
+      var progress = currentSlide / totalSlides;
+
+      if (window.innerWidth > 768) {
+        document.querySelector(".bar").style.height = progress * 100 + "%";
+      } else {
+        document.querySelector(".bar").style.width = progress * 100 + "%";
+      }
+    });
+  }
   // PIN
 
   if (document.querySelector("#amenities-pin")) {
