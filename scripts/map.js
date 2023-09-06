@@ -2,7 +2,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiZHVvc3R1ZGlvIiwiYSI6ImNsbHI0dzNlZzBpeGcza28wN3poZ2kyaDkifQ.8jcIDMyngTd6XLhNt5jOEA";
 var map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/mapbox/light-v9",
+  style: "mapbox://styles/mapbox/light-v11",
   center: [-73.85801488650704, 40.728214130453196],
   zoom: window.innerWidth > 1024 ? 15.1 : 14.5,
 });
@@ -726,21 +726,11 @@ map.on("load", function () {
         source: "locations",
         type: "symbol",
         layout: {
-          "icon-image": "pin", // reference the image
+          "icon-image": "pin",
           "icon-size": 0.3,
-        },
-      },
-      locationsLoaded ? "location-highlighted" : undefined
-    );
-    map.addLayer(
-      {
-        id: "labels",
-        type: "symbol",
-        source: "locations-number",
-        layout: {
-          "text-offset": [0, -0.25],
           "text-field": ["get", "label"],
           "text-font": ["Arial Unicode MS Bold"],
+          "text-offset": [0, -0.25],
           "text-size": 12,
         },
         paint: {
@@ -749,6 +739,7 @@ map.on("load", function () {
       },
       locationsLoaded ? "location-highlighted" : undefined
     );
+
     map.on("mouseenter", "locations", () => {
       map.getCanvas().style.cursor = "pointer";
     });
@@ -784,24 +775,19 @@ map.on("load", function () {
         features: [],
       },
     });
+
     map.addLayer({
       id: "location-highlighted",
       source: "location-highlighted",
       type: "symbol",
+
       layout: {
-        "icon-image": "pin-blue", // reference the image
+        "icon-image": "pin-blue",
         "icon-size": 0.4,
-      },
-    });
-    map.addLayer({
-      id: "location-highlighted-number",
-      type: "symbol",
-      source: "location-highlighted-number",
-      layout: {
-        "text-offset": [0, -0.25],
         "text-field": ["get", "label"],
         "text-font": ["Arial Unicode MS Bold"],
-        "text-size": 16,
+        "text-offset": [0, -0.25],
+        "text-size": 12,
       },
       paint: {
         "text-color": "#ffffff",
