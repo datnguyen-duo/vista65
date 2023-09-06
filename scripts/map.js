@@ -680,12 +680,12 @@ const renderMapItems = (_locations) =>
   (document.getElementById("map-items").innerHTML = _locations
     .map(
       (el, id) =>
-        `<div class="map-button-container"><div class="circle-list-item">${
-          id + 1
-        }</div> <button class='clean-button map-item-button headline-3' onclick="highlightItem('${el.name.replace(
+        `<div class="map-button-container"><button class='clean-button map-item-button headline-3' onclick="highlightItem('${el.name.replace(
           "'",
           "\\'"
-        )}', ${id + 1})">${el.name}</button></div>`
+        )}', ${id + 1})"><div class="circle-list-item">${id + 1}</div> ${
+          el.name
+        }</button></div>`
     )
     .join(" ")
     .toString());

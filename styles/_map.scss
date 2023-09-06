@@ -18,6 +18,8 @@
 
     @media screen and (max-width: $mobile-breakpoint) {
       width: 100%;
+      border-right: none;
+      border-top: 1px solid $color-brown;
     }
   }
   #map {
@@ -29,6 +31,7 @@
       height: 500px;
       width: 100%;
       padding: 0;
+      order: -1;
     }
   }
   #map-popup {
@@ -45,13 +48,14 @@
     @media screen and (max-width: $mobile-breakpoint) {
       padding: 1rem;
       left: 1rem;
-      min-width: 400px;
+      min-width: unset;
+      width: calc(100% - 2rem);
     }
   }
 
   #map-popup-url {
     text-decoration: none;
-    color: #aa7854;
+    color: $color-brown;
   }
   .filter-container {
     display: grid;
@@ -111,7 +115,6 @@
   }
   .map-item-button {
     padding-left: 0;
-    margin-left: 1rem;
     margin-right: auto;
     color: $color-purple;
     text-align: left;
@@ -147,6 +150,8 @@
     background-color: $color-brown;
     flex-shrink: 0;
     transition: background-color 0.2s ease-in-out;
+    font-size: 14px;
+    margin-right: 1rem;
   }
 
   .mapboxgl-map {

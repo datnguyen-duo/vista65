@@ -41,6 +41,10 @@ footer {
       p {
         margin: 1rem 0 2rem;
         padding: 0 2rem;
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding: 0;
+        }
       }
 
       .btn {
