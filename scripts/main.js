@@ -170,8 +170,6 @@ window.addEventListener("load", function () {
         document.querySelector(".bar").style.width = progress * 100 + "%";
       }
     });
-
-    swiper.update();
   }
   // PIN
 

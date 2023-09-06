@@ -264,12 +264,14 @@
               }
             }
 
-            &:hover {
-              background-color: #fff;
-              img {
-                opacity: 0;
-                &.dark {
-                  opacity: 1;
+            @media screen and (min-width: $mobile-breakpoint + 1) {
+              &:hover {
+                background-color: #fff;
+                img {
+                  opacity: 0;
+                  &.dark {
+                    opacity: 1;
+                  }
                 }
               }
             }
