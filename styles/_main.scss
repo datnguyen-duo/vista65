@@ -316,19 +316,46 @@
 
 #amenities-pin {
   border-bottom: 1px solid $color-brown;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    border-bottom: none;
+  }
   .row {
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+      overflow: auto;
+      flex-shrink: 0;
+      padding: 0 2rem 1rem;
+    }
     .col {
       flex-shrink: 0;
       &:nth-child(1) {
         padding: $spacer calc(#{$gutter} / 2) $spacer 0;
+        width: 60%;
 
         @media screen and (max-width: $mobile-breakpoint) {
-          padding: $spacer / 2 2rem $spacer / 2 0;
+          padding: $spacer / 2 2rem 1rem 0;
+          width: auto;
+          flex-direction: row;
         }
-        width: 60%;
         img {
+          @media screen and (max-width: $mobile-breakpoint) {
+            flex-shrink: 0;
+            padding: 0 !important;
+            width: calc(90vw - 2rem);
+            max-width: 500px;
+          }
           &:not(:last-of-type) {
             padding-bottom: calc(#{$gutter} / 2);
+            @media screen and (max-width: $mobile-breakpoint) {
+              margin-right: 1rem;
+            }
+          }
+
+          &:last-of-type {
+            @media screen and (max-width: $mobile-breakpoint) {
+              padding-right: 2rem !important;
+            }
           }
         }
       }
@@ -343,6 +370,11 @@
 
         @media screen and (max-width: $mobile-breakpoint) {
           padding: $spacer / 2 2rem;
+          flex-direction: row;
+          height: auto;
+          width: 100%;
+          justify-content: flex-start;
+          padding: 0;
         }
         .row__inner {
           align-items: center;
@@ -350,9 +382,24 @@
           transition: border 0.2s ease-in-out;
           padding: 1rem 0;
 
+          @media screen and (max-width: $mobile-breakpoint) {
+            width: calc(90vw - 1rem);
+            max-width: 500px;
+            flex-shrink: 0;
+            padding: 0 0 1rem;
+            &:nth-last-child(2) {
+              width: calc(90vw - 4rem);
+            }
+          }
+
           &:not(:last-of-type) {
             margin-bottom: 2rem;
+
+            @media screen and (max-width: $mobile-breakpoint) {
+              margin-bottom: 0;
+            }
           }
+
           span,
           h3 {
             color: $color-brown;
@@ -360,6 +407,10 @@
           }
           h3 {
             margin-left: 2rem;
+
+            @media screen and (max-width: $mobile-breakpoint) {
+              margin-left: 1rem;
+            }
           }
 
           &.active {
@@ -373,6 +424,9 @@
         .scrollbar {
           right: unset;
           left: 0;
+          @media screen and (max-width: $mobile-breakpoint) {
+            display: none;
+          }
           .bar {
             transition: unset;
           }
