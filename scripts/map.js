@@ -182,7 +182,7 @@ var locations = [
     name: "Kosher Mezze Pizzeria & Sushi",
     lat: 40.7265292,
     lon: -73.8533871,
-    address: "100-18, Queens Boulevard, New York, NY, 11375",
+    address: "100-18, Queens Boulevard, New York, NY, 11374",
   },
   {
     category: "Restaurant",
@@ -203,7 +203,7 @@ var locations = [
     name: "Mama Schnitzel",
     lat: 40.72724,
     lon: -73.852948,
-    address: "100-22, 67th Avenue, New York, NY, 11375",
+    address: "100-22, 67th Avenue, New York, NY, 11374",
   },
   {
     category: "Restaurant",
@@ -222,9 +222,9 @@ var locations = [
   {
     category: "Restaurant",
     name: "Tandoori Food & Bakery",
-    lat: 40.730482,
-    lon: -73.861439,
-    address: "95-12, 63rd Road, New York, NY, 11374",
+    lat: 40.7323698,
+    lon: -73.8567235,
+    address: "9904 63rd Rd, Rego Park, NY 11374",
   },
   {
     category: "Restaurant",
@@ -273,7 +273,7 @@ var locations = [
     name: "Havana Dreams Cigar Lounge",
     lat: 40.724022,
     lon: -73.869293,
-    address: "63-10, Woodhaven Boulevard, New York, NY, 11379",
+    address: "63-10, Woodhaven Boulevard, New York, NY, 11374",
   },
   {
     category: "Bar",
@@ -413,7 +413,7 @@ var locations = [
     name: "AT&T Store",
     lat: 40.717265,
     lon: -73.846618,
-    address: ", Continental Avenue, New York, NY, 11375",
+    address: "107-24 Continental Ave, Queens, NY 11375,",
   },
   {
     category: "Shop",
@@ -441,7 +441,7 @@ var locations = [
     name: "Club Pilates",
     lat: 40.720514,
     lon: -73.84546,
-    address: "70-39, Austin Street, New York, NY, 11375",
+    address: "70-39A, Austin Street, New York, NY, 11375",
   },
   {
     category: "Fitness",
