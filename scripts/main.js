@@ -141,8 +141,8 @@ window.addEventListener("load", function () {
 
     var totalSlides = swiper.slides.length - swiper.loopedSlides * 2;
 
-    var prev = document.querySelector(".arrow.prev");
-    var next = document.querySelector(".arrow.next");
+    var prev = document.querySelector("#residences-slider .arrow.prev");
+    var next = document.querySelector("#residences-slider .arrow.next");
 
     prev.addEventListener("click", function () {
       swiper.slidePrev();
@@ -169,6 +169,19 @@ window.addEventListener("load", function () {
       } else {
         document.querySelector(".bar").style.width = progress * 100 + "%";
       }
+    });
+  }
+
+  if (document.querySelector(".fp-swiper")) {
+    const fpSwiper = new Swiper(".fp-swiper", {
+      slidesPerView: "auto",
+      loop: true,
+      centeredSlides: true,
+
+      navigation: {
+        nextEl: ".arrow.next",
+        prevEl: ".arrow.prev",
+      },
     });
   }
   // PIN

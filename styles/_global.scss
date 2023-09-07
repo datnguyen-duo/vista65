@@ -208,7 +208,62 @@ form {
 .auto-overflow {
   overflow: auto;
 }
+.arrows {
+  padding-left: calc(#{$gutter});
+  padding-top: 2rem;
+  margin-top: 2rem;
 
+  border-top: 1px solid $color-brown;
+  display: flex;
+  @media screen and (max-width: $mobile-breakpoint) {
+    justify-content: center;
+    padding-left: 0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: none;
+  }
+  .arrow {
+    position: relative;
+    cursor: pointer;
+    background-color: $color-brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    transition: background-color 0.2s ease-in-out;
+    &.prev {
+      transform: scale(-1, -1);
+      margin-right: 1rem;
+    }
+
+    img {
+      transition: opacity 0.2s ease-in-out;
+      width: 60%;
+      &.dark {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0;
+      }
+    }
+
+    @media screen and (min-width: $mobile-breakpoint + 1) {
+      &:hover {
+        background-color: #fff;
+        img {
+          opacity: 0;
+          &.dark {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
 .text-image {
   color: #fff;
   .row {
