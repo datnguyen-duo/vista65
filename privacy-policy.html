@@ -205,26 +205,31 @@
         <div class="close"></div>
         <h2>Sign Up Today</h2>
 
-        <input type="text" placeholder="First Name *" />
-        <input type="text" placeholder="Last Name *" />
-        <input type="text" placeholder="Email Address *" />
-        <input type="text" placeholder="Phone Number *" />
+        <input
+          type="text"
+          placeholder="First Name *"
+          name="FirstName"
+          required
+        />
+        <input type="text" placeholder="Last Name *" name="LastName" required />
+        <input
+          type="text"
+          placeholder="Email Address *"
+          name="Email"
+          required
+        />
+        <input type="text" placeholder="Phone Number *" name="Phone" required />
         <p>Household Income *</p>
         <div class="row">
           <label for="Under_75"
             ><span>Under 75k</span>
-            <input
-              type="radio"
-              name="hh-income"
-              id="Under_75"
-              value="Under_75k"
-            />
+            <input type="radio" name="Income" id="Under_75" value="Under_75k" />
             <span class="bg"></span>
           </label>
 
           <label for="75-100"
             ><span>75k-100k</span>
-            <input type="radio" name="hh-income" id="75-100" value="75-100" />
+            <input type="radio" name="Income" id="75-100" value="75-100" />
             <span class="bg"></span>
           </label>
 
@@ -232,15 +237,86 @@
             ><span>Above 100k</span>
             <input
               type="radio"
-              name="hh-income"
+              name="Income"
               id="Above_100"
               value="Above_100"
             />
             <span class="bg"></span>
           </label>
         </div>
-        <div class="btn">Submit</div>
+        <button type="submit" class="btn">Submit</button>
       </form>
+      <p class="form-response"></p>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#signUpForm").on("submit", function (e) {
+          e.preventDefault();
+          $("#signUpForm button").addClass("no-pointer");
+          let data = $(this).serializeArray();
+
+          console.log(data);
+          var endpoint = "/api.php";
+          // var hhIncome = data[4].value;
+          // var phone = data[3].value;
+          // var email = data[2].value;
+
+          // if (!hhIncome || !phone) {
+          //   $(".form-response").html("Please fill out all fields.");
+          //   setTimeout(() => {
+          //     $("#signUpForm button").removeClass("no-pointer");
+          //   }, 1000);
+          //   return false;
+          // }
+
+          $.ajax({
+            type: "POST",
+            url: endpoint,
+            data: data,
+            success: function (response) {
+              if (response.indexOf("true") > 0) {
+                $(".form-response").html("Thank you for your submission.");
+                // submitgTag(hhIncome);
+              } else if (response.indexOf("duplicate email") > 0) {
+                $(".form-response").html(
+                  "Thank you for your interest. " +
+                    email +
+                    " is already signed up."
+                );
+              } else {
+                $(".form-response").html(
+                  "An issue has occured. Please try again later or reach out to <a href='mailto:info@bkt-lottery.com'>info@bkt-lottery.com</a>"
+                );
+              }
+
+              setTimeout(() => {
+                $("#signUpForm button").removeClass("no-pointer");
+              }, 1000);
+            },
+            error: function (response) {
+              $(".form-response").html(
+                "An issue has occured. Please try again later or reach out to <a href='mailto:info@bkt-lottery.com'>info@bkt-lottery.com</a>"
+              );
+              $("#signUpForm button").removeClass("no-pointer");
+            },
+          });
+        });
+      });
+
+      // function submitgTag(hhIncome) {
+      //   if (hhIncome.indexOf("<90k") > 0) {
+      //     gtag("event", "Form", { event_category: "Below_90" });
+      //   } else if (hhIncome.indexOf("90k-125k") > 0) {
+      //     gtag("event", "Form", { event_category: "90-125" });
+      //   } else {
+      //     gtag("event", "Form", { event_category: "Above_125" });
+      //   }
+      // }
+    </script>
   </body>
 </html>

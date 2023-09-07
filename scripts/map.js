@@ -77,7 +77,7 @@ var locations = [
     name: "Mado Japanese",
     lat: 40.730418,
     lon: -73.864044,
-    address: "95-16, Queens Boulevard, New York, NY, 11374",
+    address: "95-16A, Queens Boulevard, New York, NY, 11374",
   },
   {
     category: "Restaurant",
@@ -119,7 +119,7 @@ var locations = [
     name: "Art of Grill",
     lat: 40.7298394,
     lon: -73.8606356,
-    address: "97-13, Queens Boulevard, New York, NY, 11374",
+    address: "97-13, Queens Boulevard, New York, NY, 11375",
   },
   {
     category: "Restaurant",
