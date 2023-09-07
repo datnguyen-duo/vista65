@@ -93,7 +93,12 @@ form {
       border-bottom-color: $color-purple;
     }
   }
-
+  button {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+  }
   > p {
     color: $color-brown;
     text-align: left;

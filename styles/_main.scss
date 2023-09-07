@@ -475,11 +475,13 @@
       min-width: 725px;
       padding: 0 2rem 1rem;
     }
+
     > *:not(.floor-plan) {
-      border-bottom: 1px solid $color-brown;
       display: flex;
     }
-
+    > *:not(.floor-plan):not(:nth-child(-n + 6)) {
+      border-top: 1px solid $color-brown;
+    }
     > *:not(p):not(.btn):not(.floor-plan) {
       padding: 2rem 0;
     }
@@ -515,6 +517,10 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s 0.2s ease-in-out;
+
+      &:last-of-type {
+        border-bottom: 1px solid $color-brown;
+      }
       img {
         width: 100%;
         padding: 2rem 0;
