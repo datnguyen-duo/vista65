@@ -244,10 +244,10 @@
           img {
             flex-shrink: 0;
             width: auto;
-            max-height: calc(((60vw - 2rem) * 0.9) * 0.7);
+            height: calc(((60vw - 2rem) * 0.9) * 0.7);
 
             @media screen and (max-width: $mobile-breakpoint) {
-              max-height: calc(((100vw - 2rem) * 0.9) * 0.7);
+              height: calc(((100vw - 2rem) * 0.9) * 0.7);
             }
           }
           p {
