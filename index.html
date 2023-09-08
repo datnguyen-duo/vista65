@@ -54,7 +54,7 @@
     </nav>
     <section id="banner">
       <img
-        srcset="/assets/banner.webp 1920w"
+        srcset="/assets/banner@720.webp 720w, /assets/banner.webp 1920w"
         sizes="(max-width: 1920px) 100vw, 1920px"
         src="/assets/banner.webp"
         alt="Vista65 banner"
@@ -92,8 +92,8 @@
       <div class="row">
         <div class="col">
           <img
-            srcset="/assets/hallway.webp 630w"
-            sizes="(min-width: 768px) 33vw, 100vw"
+            srcset="/assets/hallway@360.webp 360w, /assets/hallway.webp 630w"
+            sizes="(min-width: 768px) 33vw, 50vw"
             src="/assets/hallway.webp"
             alt="Vista65 Hallway"
             width="630"
@@ -116,8 +116,8 @@
             <a href="#amenities" class="btn st__text">View Amenities</a>
           </div>
           <img
-            srcset="/assets/lobby.webp 1200w"
-            sizes="(min-width: 768px) 62.5vw, 100vw"
+            srcset="/assets/lobby@720.webp 720w, /assets/lobby.webp 1200w"
+            sizes="(min-width: 768px) min(62.5vw, 1200px), 100vw"
             src="/assets/lobby.webp"
             alt="Vista65 Lobby"
             width="1200"
@@ -156,8 +156,11 @@
         <div class="col">
           <h1 class="st__headline">Residences</h1>
           <img
-            srcset="/assets/banner__residences.webp 1341w"
-            sizes="(min-width: 768px) 66.6vw, 100vw"
+            srcset="
+              /assets/banner__residences@720.webp  720w,
+              /assets/banner__residences.webp     1341w
+            "
+            sizes="(min-width: 768px) min(66.6vw, 1280px), 100vw"
             src="/assets/banner__residences.webp"
             alt="Vista65 Living Room"
             width="1341"
@@ -234,39 +237,59 @@
           <div class="row__inner swiper-wrapper">
             <div class="col__inner swiper-slide">
               <img
-                alt="Condo Kitchen Island"
-                src="/assets/residences-slider__1.webp"
+                srcset="
+                  /assets/residences__1@580.webp 580w,
+                  /assets/residences__1.webp     966w
+                "
+                sizes="(min-width: 768px) min(50vw, 960px), 80vw"
+                src="/assets/residences__1.webp"
+                alt="Kitchen"
                 width="966"
                 height="690"
                 loading="lazy"
               />
-              <p>Condo Kitchen Island</p>
+              <p>Kitchen</p>
             </div>
             <div class="col__inner swiper-slide">
               <img
-                alt="Condo Kitchen L-Shape"
-                src="/assets/residences-slider__2.webp"
+                srcset="
+                  /assets/residences__2@580.webp 580w,
+                  /assets/residences__2.webp     966w
+                "
+                sizes="(min-width: 768px) min(50vw, 960px), 80vw"
+                src="/assets/residences__2.webp"
+                alt="Kitchen"
                 width="966"
                 height="690"
                 loading="lazy"
               />
-              <p>Condo Kitchen L-Shape</p>
+              <p>Kitchen</p>
             </div>
             <div class="col__inner swiper-slide">
               <img
-                alt="Rental Kitchen"
-                src="/assets/residences-slider__3.webp"
+                srcset="
+                  /assets/residences__3@580.webp 580w,
+                  /assets/residences__3.webp     966w
+                "
+                sizes="(min-width: 768px) min(50vw, 960px), 80vw"
+                src="/assets/residences__3.webp"
+                alt="Kitchen"
                 width="966"
                 height="690"
                 loading="lazy"
               />
-              <p>Rental Kitchen</p>
+              <p>Kitchen</p>
             </div>
 
             <div class="col__inner swiper-slide">
               <img
+                srcset="
+                  /assets/residences__4@290.webp 290w,
+                  /assets/residences__4.webp     550w
+                "
+                sizes="(min-width: 768px) min(30vw, 576px), 40vw"
+                src="/assets/residences__4.webp"
                 alt="Primary Bathroom"
-                src="/assets/residences-slider__4.webp"
                 width="550"
                 height="690"
                 loading="lazy"
@@ -276,8 +299,13 @@
 
             <div class="col__inner swiper-slide">
               <img
+                srcset="
+                  /assets/residences__5@290.webp 290w,
+                  /assets/residences__5.webp     550w
+                "
+                sizes="(min-width: 768px) min(30vw, 576px), 40vw"
+                src="/assets/residences__5.webp"
                 alt="Typical Bathroom"
-                src="/assets/residences-slider__5.webp"
                 width="550"
                 height="690"
                 loading="lazy"
@@ -311,8 +339,11 @@
         <div class="col">
           <h1 class="st__headline">Amenities</h1>
           <img
-            srcset="/assets/banner__amenities.webp 1341w"
-            sizes="(min-width: 768px) 66.6vw, 100vw"
+            srcset="
+              /assets/banner__amenities@720.webp  720w,
+              /assets/banner__amenities.webp     1341w
+            "
+            sizes="(min-width: 768px) min(66.6vw, 1280px), 100vw"
             src="/assets/banner__amenities.webp"
             alt="Vista65 Lounge"
             width="1341"
@@ -327,63 +358,87 @@
       <div class="row">
         <div class="col">
           <img
-            srcset="/assets/amenities__1.webp 1010w"
-            sizes="(min-width: 768px) 53vw, 100vw"
+            srcset="
+              /assets/amenities__1@584.webp  584w,
+              /assets/amenities__1.webp     1010w
+            "
+            sizes="(min-width: 768px) min(53vw, 1017px), 80vw"
             alt="Landscape Terrace"
             src="/assets/amenities__1.webp"
             width="1010"
             height="700"
             id="landscape-terrace"
+            loading="lazy"
           />
 
           <img
-            srcset="/assets/amenities__2.webp 1010w"
-            sizes="(min-width: 768px) 53vw, 100vw"
+            srcset="
+              /assets/amenities__2@584.webp  584w,
+              /assets/amenities__2.webp     1010w
+            "
+            sizes="(min-width: 768px) min(53vw, 1017px), 80vw"
             alt="Gym"
             src="/assets/amenities__2.webp"
             width="1010"
             height="700"
             id="gym"
+            loading="lazy"
           />
 
           <img
-            srcset="/assets/amenities__3.webp 1010w"
+            srcset="
+              /assets/amenities__3@584.webp  584w,
+              /assets/amenities__3.webp     1010w
+            "
+            sizes="(min-width: 768px) min(53vw, 1017px), 80vw"
             alt="Kid's Room"
-            sizes="(min-width: 768px) 53vw, 100vw"
             src="/assets/amenities__3.webp"
             width="1010"
             height="700"
             id="kids-room"
+            loading="lazy"
           />
 
           <img
-            srcset="/assets/amenities__4.webp 1010w"
+            srcset="
+              /assets/amenities__4@584.webp  584w,
+              /assets/amenities__4.webp     1010w
+            "
+            sizes="(min-width: 768px) min(53vw, 1017px), 80vw"
             alt="Outdoor Dining"
-            sizes="(min-width: 768px) 53vw, 100vw"
             src="/assets/amenities__4.webp"
             width="1010"
             height="700"
             id="outdoor-dining"
+            loading="lazy"
           />
 
           <img
-            srcset="/assets/amenities__5.webp 1010w"
+            srcset="
+              /assets/amenities__5@584.webp  584w,
+              /assets/amenities__5.webp     1010w
+            "
+            sizes="(min-width: 768px) min(53vw, 1017px), 80vw"
             alt="Lounge"
-            sizes="(min-width: 768px) 53vw, 100vw"
             src="/assets/amenities__5.webp"
             width="1010"
             height="700"
             id="lounge"
+            loading="lazy"
           />
 
           <img
-            srcset="/assets/amenities__6.webp 1010w"
+            srcset="
+              /assets/amenities__6@584.webp  584w,
+              /assets/amenities__6.webp     1010w
+            "
+            sizes="(min-width: 768px) min(53vw, 1017px), 80vw"
             alt="Lobby"
-            sizes="(min-width: 768px) 53vw, 100vw"
             src="/assets/amenities__6.webp"
             width="1010"
             height="700"
             id="lobby"
+            loading="lazy"
           />
         </div>
         <div class="col pinned">
@@ -455,33 +510,45 @@
               <div class="fp-swiper no-overflow">
                 <div class="swiper-wrapper">
                   <img
-                    srcset="/assets/floor-plans/Studio/98-08 Queens Boulevard_Unit 5H_7H_8L.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/Studio/98-08 Queens Boulevard_Unit 5H_7H_8L.webp"
+                    srcset="
+                      /assets/floor-plans/Studio/98-08_Queens_Boulevard_Unit_5H_7H_8L@900.webp 1090w,
+                      /assets/floor-plans/Studio/98-08_Queens_Boulevard_Unit_5H_7H_8L.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/Studio/98-08_Queens_Boulevard_Unit_5H_7H_8L.webp"
                     alt="Vista65 Studio Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/Studio/98-08 Queens Boulevard_Unit 5K_7K_8N.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/Studio/98-08 Queens Boulevard_Unit 5K_7K_8N.webp"
+                    srcset="
+                      /assets/floor-plans/Studio/98-08_Queens_Boulevard_Unit_5K_7K_8N@900.webp 1090w,
+                      /assets/floor-plans/Studio/98-08_Queens_Boulevard_Unit_5K_7K_8N.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/Studio/98-08_Queens_Boulevard_Unit_5K_7K_8N.webp"
                     alt="Vista65 Studio Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/Studio/98-08 Queens Boulevard_Unit 5L_7L_8P.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/Studio/98-08 Queens Boulevard_Unit 5L_7L_8P.webp"
+                    srcset="
+                      /assets/floor-plans/Studio/98-08_Queens_Boulevard_Unit_5L_7L_8P@900.webp 1090w,
+                      /assets/floor-plans/Studio/98-08_Queens_Boulevard_Unit_5L_7L_8P.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/Studio/98-08_Queens_Boulevard_Unit_5L_7L_8P.webp"
                     alt="Vista65 Studio Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
                 </div>
 
@@ -553,93 +620,129 @@
               <div class="fp-swiper no-overflow">
                 <div class="swiper-wrapper">
                   <img
-                    srcset="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_4E.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_4E.webp"
+                    srcset="
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_4E@900.webp 1090w,
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_4E.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_4E.webp"
                     alt="Vista65 1 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_5G.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_5G.webp"
+                    srcset="
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_5G@900.webp 1090w,
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_5G.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_5G.webp"
                     alt="Vista65 1 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_6G_7G.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_6G_7G.webp"
+                    srcset="
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_6G_7G@900.webp 1090w,
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_6G_7G.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_6G_7G.webp"
                     alt="Vista65 1 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_7C.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_7C.webp"
+                    srcset="
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_7C@900.webp 1090w,
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_7C.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_7C.webp"
                     alt="Vista65 1 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_7E.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_7E.webp"
+                    srcset="
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_7E@900.webp 1090w,
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_7E.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_7E.webp"
                     alt="Vista65 1 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_8E.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_8E.webp"
+                    srcset="
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8E@900.webp 1090w,
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8E.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8E.webp"
                     alt="Vista65 1 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_8F.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_8F.webp"
+                    srcset="
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8F@900.webp 1090w,
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8F.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8F.webp"
                     alt="Vista65 1 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_8H.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_8H.webp"
+                    srcset="
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8H@900.webp 1090w,
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8H.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8H.webp"
                     alt="Vista65 1 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_8K.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/1BR/98-08 Queens Boulevard_Unit_8K.webp"
+                    srcset="
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8K@900.webp 1090w,
+                      /assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8K.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/1BR/98-08_Queens_Boulevard_Unit_8K.webp"
                     alt="Vista65 1 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
                 </div>
 
@@ -687,10 +790,10 @@
           <div class="headline-3">Two Bedroom</div>
           <div class="headline-3">$3,195</div>
           <div class="col">
-            <p>1 person</p>
             <p>2 people</p>
             <p>3 people</p>
             <p>4 people</p>
+            <p>5 people</p>
           </div>
           <div class="col">
             <p>$109,543</p>
@@ -712,33 +815,45 @@
               <div class="fp-swiper no-overflow">
                 <div class="swiper-wrapper">
                   <img
-                    srcset="/assets/floor-plans/2BR/98-08 Queens Boulevard_Unit 5H_7H_8L.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/2BR/98-08 Queens Boulevard_Unit_5A.webp"
+                    srcset="
+                      /assets/floor-plans/2BR/98-08_Queens_Boulevard_Unit_5A@900.webp 1090w,
+                      /assets/floor-plans/2BR/98-08_Queens_Boulevard_Unit_5A.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/2BR/98-08_Queens_Boulevard_Unit_5A.webp"
                     alt="Vista65 2 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/2BR/98-08 Queens Boulevard_Unit 5K_7K_8N.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/2BR/98-08 Queens Boulevard_Unit_5F.webp"
+                    srcset="
+                      /assets/floor-plans/2BR/98-08_Queens_Boulevard_Unit_5F@900.webp 1090w,
+                      /assets/floor-plans/2BR/98-08_Queens_Boulevard_Unit_5F.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/2BR/98-08_Queens_Boulevard_Unit_5F.webp"
                     alt="Vista65 2 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
 
                   <img
-                    srcset="/assets/floor-plans/2BR/98-08 Queens Boulevard_Unit 5L_7L_8P.webp 1610w"
-                    sizes="(max-width: 1920px) 84vw, 1610px"
-                    src="/assets/floor-plans/2BR/98-08 Queens Boulevard_Unit_8J.webp"
+                    srcset="
+                      /assets/floor-plans/2BR/98-08_Queens_Boulevard_Unit_8J@900.webp 1090w,
+                      /assets/floor-plans/2BR/98-08_Queens_Boulevard_Unit_8J.webp     1610w
+                    "
+                    sizes="(max-width: 1920px) max(78vw, 545px), 1610px"
+                    src="/assets/floor-plans/2BR/98-08_Queens_Boulevard_Unit_8J.webp"
                     alt="Vista65 2 Bedroom Floor Plan"
                     width="1610"
                     height="1244"
                     class="swiper-slide"
+                    loading="lazy"
                   />
                 </div>
 
@@ -791,8 +906,11 @@
         <div class="col">
           <h1 class="st__headline">Neighborhood</h1>
           <img
-            srcset="/assets/banner__neighborhood.webp 1341w"
-            sizes="(min-width: 768px) 66.6vw, 100vw"
+            srcset="
+              /assets/banner__neighborhood@720.webp  720w,
+              /assets/banner__neighborhood.webp     1341w
+            "
+            sizes="(min-width: 768px) min(66.6vw, 1280px), 100vw"
             src="/assets/banner__neighborhood.webp"
             alt="Vista65 Neighborhood"
             width="1341"
@@ -858,7 +976,7 @@
             id="grocery-map-button"
             onclick="filterLocations('Grocery')"
           >
-            Grocery
+            Grocery & Bakeries
           </button>
           <button
             class="clean-button map-button"
@@ -901,7 +1019,7 @@
         </ul>
 
         <a class="center" href="https://goo.gl/maps/Wz9212bE41F9wTsv5"
-          >98-08 Queens Blvd Unit 6-E, Queens, NY 11374</a
+          >98-08 QUEENS BLVD, QUEENS, NY 11374</a
         >
 
         <ul>

@@ -501,14 +501,14 @@ var locations = [
   },
   {
     category: "Fitness",
-    name: "CVS Pharmacy",
+    name: "CVS Pharmacy (1)",
     lat: 40.730941,
     lon: -73.860544,
     address: "97-10, 63rd Road, New York, NY, 11374",
   },
   {
     category: "Fitness",
-    name: "CVS Pharmacy",
+    name: "CVS Pharmacy (2)",
     lat: 40.7265572,
     lon: -73.85383542,
     address: "100-02, Queens Boulevard, New York, NY, 11375",

@@ -466,9 +466,7 @@
       &:last-of-type {
         border-bottom: 1px solid $color-brown;
       }
-      // @media screen and (max-width: $mobile-breakpoint) {
-      //   max-width: calc(100vw - 4rem);
-      // }
+
       .container {
         opacity: 0;
         transition: opacity 0.2s 0s ease-in-out;

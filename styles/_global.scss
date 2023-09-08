@@ -373,3 +373,13 @@ form {
     }
   }
 }
+table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  width: 100%;
+  td {
+    padding: 10px;
+    border: 1px solid $color-purple;
+    text-align: center;
+  }
+}
