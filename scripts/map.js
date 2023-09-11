@@ -635,9 +635,9 @@ var locations = [
   {
     category: "Transportation",
     name: "67 Av (R train)",
-    lat: 40.726730785432544,
-    lon: -73.85247569191671,
-    address: "100-37 Queens Blvd, Forest Hills, NY 11375",
+    lat: 40.7271516,
+    lon: -73.8531962,
+    address: "100-05 Queens Blvd, Queens, NY 11375",
   },
   {
     category: "Transportation",
@@ -663,16 +663,16 @@ var locations = [
   {
     category: "Transportation",
     name: "Queens Blvd/67 Av Bus Stop (Q60, QM11, QM18)",
-    lat: 40.7270833243632,
-    lon: -73.853138574453,
-    address: "9923 67th Ave, Rego Park, NY 11374",
+    lat: 40.7272473,
+    lon: -73.856209,
+    address: "99-21 Queens Blvd, Queens, NY 11375",
   },
   {
     category: "Transportation",
     name: "63 Rd/Queens Blvd Bus Stop (Q38, QM11)",
-    lat: 40.732278,
-    lon: -73.8668,
-    address: "92-63, Queens Boulevard, New York, NY, 11374",
+    lat: 40.7302961,
+    lon: -73.8642471,
+    address: "96-27 Queens Blvd, Queens, NY 11374",
   },
 ];
 
