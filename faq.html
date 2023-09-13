@@ -1624,25 +1624,30 @@
         <input type="text" placeholder="Phone Number *" name="Phone" required />
         <p>Household Income *</p>
         <div class="row">
-          <label for="Under_75"
+          <label for="Below_75k"
             ><span>Under 75k</span>
-            <input type="radio" name="Income" id="Under_75" value="Under_75k" />
+            <input
+              type="radio"
+              name="Income"
+              id="Below_75k"
+              value="Below_75k"
+            />
             <span class="bg"></span>
           </label>
 
-          <label for="75-100"
+          <label for="75k_100k"
             ><span>75k-100k</span>
-            <input type="radio" name="Income" id="75-100" value="75-100" />
+            <input type="radio" name="Income" id="75k_100k" value="75k_100k" />
             <span class="bg"></span>
           </label>
 
-          <label for="Above_100"
+          <label for="Above_100k"
             ><span>Above 100k</span>
             <input
               type="radio"
               name="Income"
-              id="Above_100"
-              value="Above_100"
+              id="Above_100k"
+              value="Above_100k"
             />
             <span class="bg"></span>
           </label>
@@ -1666,7 +1671,7 @@
           var endpoint = "/api.php";
           // var hhIncome = data[4].value;
           // var phone = data[3].value;
-          // var email = data[2].value;
+          var email = data[2].value;
 
           // if (!hhIncome || !phone) {
           //   $(".form-response").html("Please fill out all fields.");
