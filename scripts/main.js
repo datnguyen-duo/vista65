@@ -47,12 +47,12 @@ function getCountdown() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector(".countdown")) {
-    getCountdown();
-    setInterval(function () {
-      getCountdown();
-    }, 1000);
-  }
+  // if (document.querySelector(".countdown")) {
+  //   getCountdown();
+  //   setInterval(function () {
+  //     getCountdown();
+  //   }, 1000);
+  // }
 
   //NAV
   ScrollTrigger.create({

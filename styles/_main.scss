@@ -52,6 +52,7 @@
     #time {
       display: flex;
       align-items: center;
+      justify-content: center;
       p {
         width: 90px;
         &:not(:last-child) {
@@ -170,6 +171,10 @@
             width: 150px;
           }
         }
+      }
+
+      p {
+        font-weight: 400;
       }
     }
   }

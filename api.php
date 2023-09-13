@@ -19,7 +19,7 @@ curl_setopt_array($curl, array(
   CURLOPT_POSTFIELDS =>json_encode($_POST),
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json',
-    'Origin: https://vista65lottery.com/',
+    'Origin: http://vista65lottery.com/',
     //'Cookie: BrowserId=KraePd8zEeyVkP9MTE2e7Q; CookieConsentPolicy=0:1; LSKey-c$CookieConsentPolicy=0:1'
   ),
 ));

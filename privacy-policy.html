@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="stylesheet" href="https://use.typekit.net/qac4pyf.css" />
     <link rel="stylesheet" href="/styles/fonts.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/style.css?v=1.1" />
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="/scripts/libs/gsap.min.js"></script>
@@ -245,8 +245,8 @@
           </label>
         </div>
         <button type="submit" class="btn">Submit</button>
+        <p class="form-response"></p>
       </form>
-      <p class="form-response"></p>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -260,7 +260,6 @@
           $("#signUpForm button").addClass("no-pointer");
           let data = $(this).serializeArray();
 
-          console.log(data);
           var endpoint = "/api.php";
           // var hhIncome = data[4].value;
           // var phone = data[3].value;
@@ -290,7 +289,7 @@
                 );
               } else {
                 $(".form-response").html(
-                  "An issue has occured. Please try again later or reach out to <a href='mailto:info@bkt-lottery.com'>info@bkt-lottery.com</a>"
+                  "An issue has occured. Please try again later or reach out to <a href='mailto:info@vista65lottery.com'>info@vista65lottery.com</a>."
                 );
               }
 
@@ -300,7 +299,7 @@
             },
             error: function (response) {
               $(".form-response").html(
-                "An issue has occured. Please try again later or reach out to <a href='mailto:info@bkt-lottery.com'>info@bkt-lottery.com</a>"
+                "An issue has occured. Please try again later or reach out to <a href='mailto:info@vista65lottery.com'>info@vista65lottery.com</a>."
               );
               $("#signUpForm button").removeClass("no-pointer");
             },
