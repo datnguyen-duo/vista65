@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WD9S893J");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,6 +38,17 @@
     <title>Credits | Vista65</title>
   </head>
   <body class="loading has-dark-logo">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WD9S893J"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav class="main-nav">
       <ul>
         <li><a href="/#residences">Residences</a></li>
@@ -194,7 +220,7 @@
           let data = $(this).serializeArray();
 
           var endpoint = "/api.php";
-          // var hhIncome = data[4].value;
+          var hhIncome = data[4].value;
           // var phone = data[3].value;
           var email = data[2].value;
 
@@ -213,7 +239,7 @@
             success: function (response) {
               if (response.indexOf("true") > 0) {
                 $(".form-response").html("Thank you for your submission.");
-                // submitgTag(hhIncome);
+                submitgTag(hhIncome);
               } else if (response.indexOf("duplicate email") > 0) {
                 $(".form-response").html(
                   "Thank you for your interest. " +
@@ -240,15 +266,24 @@
         });
       });
 
-      // function submitgTag(hhIncome) {
-      //   if (hhIncome.indexOf("<90k") > 0) {
-      //     gtag("event", "Form", { event_category: "Below_90" });
-      //   } else if (hhIncome.indexOf("90k-125k") > 0) {
-      //     gtag("event", "Form", { event_category: "90-125" });
-      //   } else {
-      //     gtag("event", "Form", { event_category: "Above_125" });
-      //   }
-      // }
+      function submitgTag(hhIncome) {
+        if (hhIncome.indexOf("Below_75") > 0) {
+          dataLayer.push({
+            event: "Sign_up",
+            income_label: "Under_75",
+          });
+        } else if (hhIncome.indexOf("75k_100k") > 0) {
+          dataLayer.push({
+            event: "Sign_up",
+            income_label: "75_100",
+          });
+        } else {
+          dataLayer.push({
+            event: "Sign_up",
+            income_label: "Above_100",
+          });
+        }
+      }
     </script>
   </body>
 </html>
