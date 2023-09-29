@@ -131,11 +131,11 @@
 }
 
 #cta {
+  max-width: 1200px;
   padding: 0 calc(#{$gutter});
-  margin-bottom: $spacer;
+  margin: 0 auto $spacer;
   @media screen and (max-width: $mobile-breakpoint) {
     margin-bottom: $spacer / 2;
-
     padding: 0 2rem;
   }
   .row {

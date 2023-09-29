@@ -267,12 +267,12 @@
       });
 
       function submitgTag(hhIncome) {
-        if (hhIncome.indexOf("Below_75") > 0) {
+        if (hhIncome == "Below_75k") {
           dataLayer.push({
             event: "Sign_up",
             income_label: "Under_75",
           });
-        } else if (hhIncome.indexOf("75k_100k") > 0) {
+        } else if (hhIncome == "75k_100k") {
           dataLayer.push({
             event: "Sign_up",
             income_label: "75_100",

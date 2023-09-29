@@ -1468,7 +1468,10 @@
               </h3>
               <div class="answer">
                 <div class="wrapper">
-                  <p>Six months of free general amenities.</p>
+                  <p>
+                    Only $55 / month for access to the general amenities
+                    package.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1742,12 +1745,12 @@
       });
 
       function submitgTag(hhIncome) {
-        if (hhIncome.indexOf("Below_75") > 0) {
+        if (hhIncome == "Below_75k") {
           dataLayer.push({
             event: "Sign_up",
             income_label: "Under_75",
           });
-        } else if (hhIncome.indexOf("75k_100k") > 0) {
+        } else if (hhIncome == "75k_100k") {
           dataLayer.push({
             event: "Sign_up",
             income_label: "75_100",
