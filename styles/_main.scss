@@ -132,11 +132,12 @@
 
 #cta {
   max-width: 1200px;
-  padding: 0 calc(#{$gutter});
+  padding: $gutter calc(#{$gutter}) 0;
   margin: 0 auto $spacer;
   @media screen and (max-width: $mobile-breakpoint) {
     margin-bottom: $spacer / 2;
-    padding: 0 2rem;
+    padding: 4rem 2rem 0;
+    text-align: center;
   }
   .row {
     border-top: 1px solid $color-brown;
@@ -148,11 +149,14 @@
       padding-top: 1rem;
     }
     .col {
+      @media screen and (max-width: $mobile-breakpoint) {
+        align-items: center;
+      }
       &:not(:last-child) {
-        padding-right: calc(#{$gutter});
+        padding-right: 4rem;
 
         @media screen and (max-width: $mobile-breakpoint) {
-          padding-right: 1rem;
+          padding-right: 0;
           width: 100%;
           margin-bottom: 1rem;
           br {
@@ -166,15 +170,24 @@
         flex-shrink: 0;
 
         @media screen and (max-width: $mobile-breakpoint) {
-          margin: 2rem auto 0 0;
+          margin: 2rem auto 0;
           .btn {
             width: 150px;
+            margin: 0;
           }
         }
       }
 
       p {
         font-weight: 400;
+      }
+
+      img {
+        margin: auto auto 1rem;
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          margin: 0 0 1rem;
+        }
       }
     }
   }
