@@ -1,5 +1,5 @@
 function getCountdown() {
-  var countDownDate = new Date("September 29, 2023 00:00:00").getTime();
+  var countDownDate = new Date("February 5, 2024 19:00:00").getTime();
 
   var now = new Date().getTime();
 
@@ -10,22 +10,23 @@ function getCountdown() {
     return;
   }
 
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24) / 7);
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24) - weeks * 7);
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  // var weeks = Math.floor(distance / (1000 * 60 * 60 * 24) / 7);
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-  document.querySelector(".weeks").innerHTML = weeks;
+  // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  // var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  // var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // document.querySelector(".weeks").innerHTML = weeks;
   document.querySelector(".days").innerHTML = days;
-  document.querySelector(".hours").innerHTML = hours;
-  document.querySelector(".minutes").innerHTML = minutes;
+  // document.querySelector(".hours").innerHTML = hours;
+  // document.querySelector(".minutes").innerHTML = minutes;
 
-  if (weeks == 1) {
-    document.querySelector(".weeks__label").innerHTML = "week";
-  } else {
-    document.querySelector(".weeks__label").innerHTML = "weeks";
-  }
+  // if (weeks == 1) {
+  //   document.querySelector(".weeks__label").innerHTML = "week";
+  // } else {
+  //   document.querySelector(".weeks__label").innerHTML = "weeks";
+  // }
 
   if (days == 1) {
     document.querySelector(".days__label").innerHTML = "day";
@@ -33,26 +34,26 @@ function getCountdown() {
     document.querySelector(".days__label").innerHTML = "days";
   }
 
-  if (hours == 1) {
-    document.querySelector(".hours__label").innerHTML = "hour";
-  } else {
-    document.querySelector(".hours__label").innerHTML = "hours";
-  }
+  // if (hours == 1) {
+  //   document.querySelector(".hours__label").innerHTML = "hour";
+  // } else {
+  //   document.querySelector(".hours__label").innerHTML = "hours";
+  // }
 
-  if (minutes == 1) {
-    document.querySelector(".minutes__label").innerHTML = "minute";
-  } else {
-    document.querySelector(".minutes__label").innerHTML = "minutes";
-  }
+  // if (minutes == 1) {
+  //   document.querySelector(".minutes__label").innerHTML = "minute";
+  // } else {
+  //   document.querySelector(".minutes__label").innerHTML = "minutes";
+  // }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // if (document.querySelector(".countdown")) {
-  //   getCountdown();
-  //   setInterval(function () {
-  //     getCountdown();
-  //   }, 1000);
-  // }
+  if (document.querySelector(".countdown")) {
+    getCountdown();
+    setInterval(function () {
+      getCountdown();
+    }, 60000);
+  }
 
   //NAV
   ScrollTrigger.create({
