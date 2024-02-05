@@ -11,14 +11,14 @@ function getCountdown() {
   }
 
   // var weeks = Math.floor(distance / (1000 * 60 * 60 * 24) / 7);
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
   // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   // var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   // var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // document.querySelector(".weeks").innerHTML = weeks;
-  document.querySelector(".days").innerHTML = days;
+  // document.querySelector(".days").innerHTML = days;
   // document.querySelector(".hours").innerHTML = hours;
   // document.querySelector(".minutes").innerHTML = minutes;
 
@@ -28,11 +28,11 @@ function getCountdown() {
   //   document.querySelector(".weeks__label").innerHTML = "weeks";
   // }
 
-  if (days == 1) {
-    document.querySelector(".days__label").innerHTML = "day";
-  } else {
-    document.querySelector(".days__label").innerHTML = "days";
-  }
+  // if (days == 1) {
+  //   document.querySelector(".days__label").innerHTML = "day";
+  // } else {
+  //   document.querySelector(".days__label").innerHTML = "days";
+  // }
 
   // if (hours == 1) {
   //   document.querySelector(".hours__label").innerHTML = "hour";
